@@ -11,7 +11,7 @@
   "main": "babel.server.js",
   "scripts": {
     "start": "NODE_PATH=\"./src\" NODE_ENV=\"production\" node ./babel.server",
-    "build": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config --progress webpack/prod.config.js",
+    "build": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config webpack/prod.config.js",
     "start-dev": "NODE_PATH=\"./src\" NODE_ENV=\"development\" node ./babel.server",
     "watch-client": "NODE_PATH=\"./src\" node webpack/webpack-dev-server.js",
     "dev": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run watch-client\" \"npm run start-dev\"",

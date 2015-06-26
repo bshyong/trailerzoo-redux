@@ -1,0 +1,6 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:trailerzoo-redux.git $CIRCLE_SHA1:master
+      - node ./post-deploy.js

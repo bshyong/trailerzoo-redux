@@ -6,8 +6,7 @@
   "homepage": "http://trailerzoo.com",
   "keywords": [
     "react",
-    "redux",
-    "babel"
+    "redux"
   ],
   "main": "babel.server.js",
   "scripts": {

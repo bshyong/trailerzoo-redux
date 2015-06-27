@@ -67,8 +67,7 @@ app.use((req, res) => {
                 <link rel="shortcut icon" href="/favicon.ico"/>
                 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
                       media="screen, projection" rel="stylesheet" type="text/css"/>
-                {webpackStats.css.map((css, i) => <link href={css} ref={i}
-                      media="screen, projection" rel="stylesheet" type="text/css"/>)}
+                    {webpackStats.css.map((css, i) => <link href={css} key={i} ref={i} media="screen, projection" rel="stylesheet" type="text/css"/>)}
                 <script dangerouslySetInnerHTML={{__html: segment}}/>
               </head>
               <body>

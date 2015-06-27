@@ -45,6 +45,9 @@ app.use((req, res) => {
     // hot module replacement is enabled in the development env
     delete require.cache[require.resolve('../webpack-stats.json')];
   }
+
+  const segment = '!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";analytics.load("E3Hfp3MrhRLsNsqPpETK4gibE6zEG9RC");analytics.page()}}();'
+
   Router.run(routes, location, (error, initialState) => {
     if (error) {
       res.status(500).send(error);
@@ -66,6 +69,7 @@ app.use((req, res) => {
                       media="screen, projection" rel="stylesheet" type="text/css"/>
                 {webpackStats.css.map((css, i) => <link href={css} ref={i}
                       media="screen, projection" rel="stylesheet" type="text/css"/>)}
+                <script dangerouslySetInnerHTML={{__html: segment}}/>
               </head>
               <body>
               <div id="content" dangerouslySetInnerHTML={{__html: React.renderToString(
@@ -74,9 +78,7 @@ app.use((req, res) => {
                 </Provider>)
               }}/>
               <script dangerouslySetInnerHTML={{__html: `window.__data=${JSON.stringify(state)};`}}/>
-              {webpackStats.script.map((script, i) =>
-                <script src={script} key={i}/>
-              )}
+              <script src={webpackStats.script[0]}/>
               </body>
               </html>));
         }).catch((err) => {

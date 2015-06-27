@@ -12,7 +12,20 @@
     "block-scoped-var": 0,
     // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
     "padded-blocks": 0,
-    "no-console": 0
+    "no-console": 0,
+    "no-extra-semi": 2,
+    "semi": [0, "never"],
+    /**
+     * Variables
+     */
+        "no-shadow": 2,                  // http://eslint.org/docs/rules/no-shadow
+        "no-shadow-restricted-names": 2, // http://eslint.org/docs/rules/no-shadow-restricted-names
+        "no-unused-vars": [2, {          // http://eslint.org/docs/rules/no-unused-vars
+          "vars": "local",
+          "args": "after-used"
+        }],
+        "no-use-before-define": 2,       // http://eslint.org/docs/rules/no-use-before-define
+
   },
   "plugins": [
     "react"

@@ -1,3 +1,6 @@
 export const INFO_LOAD = 'INFO_LOAD';
 export const INFO_LOAD_SUCCESS = 'INFO_LOAD_SUCCESS';
 export const INFO_LOAD_FAIL = 'INFO_LOAD_FAIL';
+export const MOVIES_LOAD = 'MOVIES_LOAD';
+export const MOVIES_LOAD_SUCCESS = 'MOVIES_LOAD_SUCCESS';
+export const MOVIES_LOAD_FAIL = 'MOVIES_LOAD_FAIL';

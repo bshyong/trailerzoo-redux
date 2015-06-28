@@ -63,7 +63,7 @@ app.use((req, res) => {
               <html lang="en-us">
               <head>
                 <meta charSet="utf-8"/>
-                <title>React Redux Isomorphic Example</title>
+                <title>TrailerZoo</title>
                 <link rel="shortcut icon" href="/favicon.ico"/>
                 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
                       media="screen, projection" rel="stylesheet" type="text/css"/>

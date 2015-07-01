@@ -9,7 +9,7 @@ const initialState = {
   movies: []
 };
 
-export default function info(state = initialState, action = {}) {
+export default function movies(state = initialState, action = {}) {
   switch (action.type) {
     case MOVIES_LOAD:
       return {
@@ -21,7 +21,8 @@ export default function info(state = initialState, action = {}) {
         ...state,
         loading: false,
         loaded: true,
-        movies: action.result
+        movies: action.result.movies,
+        pageInfo: action.result.pageInfo
       };
     case MOVIES_LOAD_FAIL:
       return {

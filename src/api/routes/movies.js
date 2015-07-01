@@ -39,7 +39,7 @@ export default function() {
           id: "uuid-4",
           publishedAt: "2015-06-10T13:37:38.000Z",
           title: "Regression Official Trailer #1 (2015) - Emma Watson, Ethan Hawke Movie HD",
-          thumbnailUrl: "http://www.impawards.com/2015/posters/regression_ver2.jpg",
+          thumbnailUrl: "http://i.imgur.com/6DygxeY.jpg",
           videoUrl: "https://www.youtube.com/watch?v=-pBwIsVGaL4",
           trailers: [{
               name: "Trailer #1",
@@ -49,7 +49,7 @@ export default function() {
           id: "uuid-5",
           publishedAt: "2015-06-04T15:34:54.000Z",
           title: "Mission: Impossible Rogue Nation Official Trailer #2 (2015) - Tom Cruise Action Movie HD",
-          thumbnailUrl: "http://www.impawards.com/2015/posters/mission_impossible__rogue_nation.jpg",
+          thumbnailUrl: "http://i.imgur.com/iKpotQZ.jpg",
           videoUrl: "https://www.youtube.com/watch?v=hmidVepX2gQ",
           trailers: [{
               name: "Trailer #1",
